@@ -30,3 +30,8 @@ for(link of menuLinks) {
   a.innerHTML = `<a href = 'links${link.href}.html' target="_blank">${link.text}</a>`
   topMenuEl.appendChild(a)
 }
+
+let subMenuEl = document.querySelector('#sub-menu');
+subMenuEl.style.height = '100%';
+subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)';
+subMenuEl.className = 'flex-around'
