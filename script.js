@@ -50,6 +50,16 @@ for(link of menuLinks) {
   topMenuLinks.push(a)
 }
 
+topMenuEl.addEventListener('click', handleClick);
+
+function handleClick(evt) {
+  evt.preventDefault()
+  if(evt.target.tagName != 'A') {
+    return
+  }
+  console.log(evt.target.textContent);
+}
+
 let subMenuEl = document.querySelector('#sub-menu');
 subMenuEl.style.height = '100%';
 subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)';
