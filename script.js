@@ -34,4 +34,7 @@ for(link of menuLinks) {
 let subMenuEl = document.querySelector('#sub-menu');
 subMenuEl.style.height = '100%';
 subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)';
-subMenuEl.className = 'flex-around'
+subMenuEl.className = 'flex-around';
+subMenuEl.style.position = 'absolute';
+subMenuEl.style.top = 0;
+console.dir(subMenuEl)
