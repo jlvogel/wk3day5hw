@@ -1,11 +1,28 @@
 // Menu data structure
+// var menuLinks = [
+//   {text: 'about', href: '/about'},
+//   {text: 'catalog', href: '/catalog'},
+//   {text: 'orders', href: '/orders'},
+//   {text: 'account', href: '/account'},
+// ];
+
 var menuLinks = [
   {text: 'about', href: '/about'},
-  {text: 'catalog', href: '/catalog'},
-  {text: 'orders', href: '/orders'},
-  {text: 'account', href: '/account'},
+  {text: 'catalog', href: '#', subLinks: [
+    {text: 'all', href: '/catalog/all'},
+    {text: 'top selling', href: '/catalog/top'},
+    {text: 'search', href: '/catalog/search'},
+  ]},
+  {text: 'orders', href: '#' , subLinks: [
+    {text: 'new', href: '/orders/new'},
+    {text: 'pending', href: '/orders/pending'},
+    {text: 'history', href: '/orders/history'},
+  ]},
+  {text: 'account', href: '#', subLinks: [
+    {text: 'profile', href: '/account/profile'},
+    {text: 'sign out', href: '/account/signout'},
+  ]},
 ];
-
 
 
 
@@ -23,12 +40,14 @@ topMenuEl.className = 'flex-around'
 
 console.dir(topMenuEl)
 
+let topMenuLinks = []
 for(link of menuLinks) {
   let a = document.createElement('a')
   // a.href = link.href
   // a.textContent = link.text
   a.innerHTML = `<a href = 'links${link.href}.html' target="_blank">${link.text}</a>`
   topMenuEl.appendChild(a)
+  topMenuLinks.push(a)
 }
 
 let subMenuEl = document.querySelector('#sub-menu');
@@ -38,3 +57,5 @@ subMenuEl.className = 'flex-around';
 subMenuEl.style.position = 'absolute';
 subMenuEl.style.top = 0;
 console.dir(subMenuEl)
+
+let showingSubMenu = false;
