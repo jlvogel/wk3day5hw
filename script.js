@@ -1,12 +1,34 @@
 // Task 3.0
 // Copy the following data structure to the top of script.js:
 
+// // Menu data structure
+// var menuLinks = [
+//   {text: 'about', href: '/about'},
+//   {text: 'catalog', href: '/catalog'},
+//   {text: 'orders', href: '/orders'},
+//   {text: 'account', href: '/account'},
+// ];
+
+// Task 5.0
+// Update the menuLinksarray in script.js to this:
+
 // Menu data structure
 var menuLinks = [
   {text: 'about', href: '/about'},
-  {text: 'catalog', href: '/catalog'},
-  {text: 'orders', href: '/orders'},
-  {text: 'account', href: '/account'},
+  {text: 'catalog', href: '#', subLinks: [
+    {text: 'all', href: '/catalog/all'},
+    {text: 'top selling', href: '/catalog/top'},
+    {text: 'search', href: '/catalog/search'},
+  ]},
+  {text: 'orders', href: '#' , subLinks: [
+    {text: 'new', href: '/orders/new'},
+    {text: 'pending', href: '/orders/pending'},
+    {text: 'history', href: '/orders/history'},
+  ]},
+  {text: 'account', href: '#', subLinks: [
+    {text: 'profile', href: '/account/profile'},
+    {text: 'sign out', href: '/account/signout'},
+  ]},
 ];
 
 
@@ -95,3 +117,24 @@ subMenuEl.style.position = 'absolute'
 // Task 4.5
 // Set the CSS topproperty of subMenuElto the value of 0.
 subMenuEl.style.top = 0
+
+// Task 5.0
+// Update the menuLinksarray in script.js to this:
+
+// var menuLinks = [
+//   {text: 'about', href: '/about'},
+//   {text: 'catalog', href: '#', subLinks: [
+//     {text: 'all', href: '/catalog/all'},
+//     {text: 'top selling', href: '/catalog/top'},
+//     {text: 'search', href: '/catalog/search'},
+//   ]},
+//   {text: 'orders', href: '#' , subLinks: [
+//     {text: 'new', href: '/orders/new'},
+//     {text: 'pending', href: '/orders/pending'},
+//     {text: 'history', href: '/orders/history'},
+//   ]},
+//   {text: 'account', href: '#', subLinks: [
+//     {text: 'profile', href: '/account/profile'},
+//     {text: 'sign out', href: '/account/signout'},
+//   ]},
+// ];
