@@ -1,3 +1,15 @@
+// Task 3.0
+// Copy the following data structure to the top of script.js:
+
+// Menu data structure
+var menuLinks = [
+  {text: 'about', href: '/about'},
+  {text: 'catalog', href: '/catalog'},
+  {text: 'orders', href: '/orders'},
+  {text: 'account', href: '/account'},
+];
+
+
 // Task 1.0
 // Select and cache the <main>element in a variable named mainEl.
 mainEl = document.querySelector('main')
@@ -33,3 +45,14 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
 // Task 2.3
 // Add a class of flex-around to topMenuEl .
 topMenuEl.classList.add('flex-around')
+
+// Task 3.0
+// Copy the following data structure to the top of script.js:
+
+// // Menu data structure
+// var menuLinks = [
+//   {text: 'about', href: '/about'},
+//   {text: 'catalog', href: '/catalog'},
+//   {text: 'orders', href: '/orders'},
+//   {text: 'account', href: '/account'},
+// ];
