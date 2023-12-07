@@ -234,6 +234,11 @@ function handleClick(evt) {
           // Task 5.7
           subLinksArray = link.subLinks
         }
+        // Task 6.4
+        // If the ABOUT link is clicked, an <h1>about</h1> should be displayed.
+        else {
+          mainEl.innerHTML = `<h1>${link.text}</h1>`
+        }
       }
     }
 
@@ -320,3 +325,6 @@ function subMenuHandleClick(evt) {
   }
 
 }
+
+// Task 6.4
+// If the ABOUT link is clicked, an <h1>about</h1> should be displayed.
