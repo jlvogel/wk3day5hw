@@ -179,12 +179,17 @@ topMenuEl.addEventListener('click', handleClick)
 // Task 5.5
 // Next, the event listener should add a class name of active to the <a> element that was clicked.
 
+// Task 5.6
+// Set showingSubMenu to true if the clicked <a> element's "link" object within menuLinks has a subLinks property (all do, except for the "link" object for ABOUT), otherwise, set it to false.
+
+// Hint: Saving the "link" object in a variable will come in handy for passing its subLinksarray in Task 5.7
+
 function handleClick(evt) {
   evt.preventDefault()
   if(evt.target.tagName != 'A') {
     return
   } else {
-    console.log(evt.target.text)
+    // console.log(evt.target.text)
     let a = evt.target
     if (a.classList.contains('active')) {
       a.classList.remove('active')
@@ -192,12 +197,26 @@ function handleClick(evt) {
       subMenuEl.style.top = 0
       return
     }
+
     // Task 5.4
     for (const link of topMenuLinks) {
       link.classList.remove('active')
     }
+
     //Task 5.5
     a.classList.add('active')
+
+    //Task 5.6
+    // need to see if subLinks exists in menuLinks for the corresponding <a> element:
+    // First we need to find the menuLink item where menuLinks[indx].text == a.text
+    for (link of menuLinks){
+      if (link.text == a.text) {
+        if(link.hasOwnProperty('subLinks')) {
+          showingSubMenu = true
+        }
+      }
+    }
+
   }
 }
 
