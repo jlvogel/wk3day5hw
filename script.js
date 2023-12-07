@@ -56,3 +56,19 @@ topMenuEl.classList.add('flex-around')
 //   {text: 'orders', href: '/orders'},
 //   {text: 'account', href: '/account'},
 // ];
+
+// Task 3.1
+// Iterate over the entire menuLinksarray and for each "link" object:
+
+//    Create an <a>element.
+//    On the new element, add an href attribute with its value set to the href property of the "link" object.
+//    Set the new element's content to the value of the text property of the "link" object.
+//    Append the new element to the topMenuEl element.
+
+for(link of menuLinks) {
+  let a = document.createElement('a')
+  a.href = link.href
+  a.text = link.text
+  topMenuEl.appendChild(a)
+}
+
