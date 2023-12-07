@@ -280,3 +280,22 @@ function buildSubMenu(subLinksArray) {
     subMenuEl.appendChild(a)
   }
 }
+
+// Task 6.0
+// Attach a delegated 'click' event listener to subMenuEl.
+subMenuEl.addEventListener('click', subMenuHandleClick)
+
+function subMenuHandleClick(evt) {
+  // The first line of code of the event listener function should call the event object's preventDefault()method.
+  evt.preventDefault()
+ 
+  // The second line of code function should immediately return if the element clicked was not an <a>element.
+  if(evt.target.tagName != 'A') {
+    return
+  } else {
+    // console.log the content of the <a> to verify the handler is working.
+    let a = evt.target
+    console.log(a.text)
+  }
+
+}
