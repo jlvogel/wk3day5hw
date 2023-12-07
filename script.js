@@ -171,6 +171,11 @@ topMenuEl.addEventListener('click', handleClick)
 // 4. returnto exit the handler.
 
 
+// Task 5.4
+// Next, the event listener should remove a class name of active from each <a> element in topMenuLinks- whether the active class exists or not.
+
+// Hint: Removing a non-existent class from an element does not cause an error, so just remove it!
+
 function handleClick(evt) {
   evt.preventDefault()
   if(evt.target.tagName != 'A') {
@@ -184,6 +189,8 @@ function handleClick(evt) {
       subMenuEl.style.top = 0
       return
     }
+    // Task 5.4
+    a.classList.remove('active')
   }
 }
 
