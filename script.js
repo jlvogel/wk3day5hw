@@ -26,3 +26,7 @@ topMenuEl = document.querySelector('#top-menu')
 // Set the height topMenuEl element to be 100% .
 topMenuEl.style.height = '100%'
 
+// Task 2.2
+// Set the background color of topMenuElto the value stored in the --top-menu-bgCSS custom property.
+topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
+
