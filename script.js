@@ -161,12 +161,29 @@ topMenuEl.addEventListener('click', handleClick)
 // The second line of code function should immediately return if the element clicked was not an <a>element.
 
 // console.logthe content of the <a>to verify the handler is working.
+
+// Task 5.3
+// Next in the event listener, if the clicked <a>link has a class of active:
+
+// 1. Remove the activeclass from the clicked <a>element.
+// 2. Set the showingSubMenuto false.
+// 3. Set the CSS topproperty of subMenuElto 0.
+// 4. returnto exit the handler.
+
+
 function handleClick(evt) {
   evt.preventDefault()
   if(evt.target.tagName != 'A') {
     return
   } else {
     console.log(evt.target.text)
+    let a = evt.target
+    if (a.classList.contains('active')) {
+      a.classList.remove('active')
+      showingSubMenu = false
+      subMenuEl.style.top = 0
+      return
+    }
   }
 }
 
