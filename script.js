@@ -72,3 +72,6 @@ for(link of menuLinks) {
   topMenuEl.appendChild(a)
 }
 
+// Task 4.0
+// Select and cache the <nav id=sub-menu"> element in a variable named subMenuEl .
+subMenuEl = document.querySelector('#sub-menu')
