@@ -184,6 +184,17 @@ topMenuEl.addEventListener('click', handleClick)
 
 // Hint: Saving the "link" object in a variable will come in handy for passing its subLinksarray in Task 5.7
 
+// Task 5.7
+// Next in the event listener...
+
+// If showingSubMenu is true:
+
+// Call a buildSubMenu function passing to it the subLinks array for the clicked <a> element.
+// Set the CSS top property of subMenuEl to 100%.
+// Otherwise (showingSubMenu is false):
+
+// Set the CSS top property of subMenuEl to 0.
+
 function handleClick(evt) {
   evt.preventDefault()
   if(evt.target.tagName != 'A') {
@@ -209,14 +220,40 @@ function handleClick(evt) {
     //Task 5.6
     // need to see if subLinks exists in menuLinks for the corresponding <a> element:
     // First we need to find the menuLink item where menuLinks[indx].text == a.text
+    
+
+    // Task 5.7
+    let subLinksArray = []
+    
+    // Task 5.6
     for (link of menuLinks){
       if (link.text == a.text) {
         if(link.hasOwnProperty('subLinks')) {
           showingSubMenu = true
+
+          // Task 5.7
+          subLinksArray = link.subLinks
         }
       }
     }
 
+
+    // Task 5.7
+
+    // If showingSubMenu is true:
+    if(showingSubMenu == true){
+
+      // Call a buildSubMenu function passing to it the subLinks array for the clicked <a> element.
+      buildSubMenu(subLinksArray)
+
+      // Set the CSS top property of subMenuEl to 100%.
+      subMenuEl.style.top = '100%'
+    } 
+    // Otherwise (showingSubMenu is false):
+    else {
+      // Set the CSS top property of subMenuEl to 0.
+      subMenuEl.style.top = 0
+    }
   }
 }
 
