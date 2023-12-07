@@ -196,6 +196,8 @@ function handleClick(evt) {
     for (const link of topMenuLinks) {
       link.classList.remove('active')
     }
+    //Task 5.5
+    a.classList.add('active')
   }
 }
 
