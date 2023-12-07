@@ -257,3 +257,26 @@ function handleClick(evt) {
   }
 }
 
+// Task 5.8
+
+// Code the buildSubMenufunction so that it:
+function buildSubMenu(subLinksArray) {
+  // Clears the contents of subMenuEl.
+  subMenuEl.innerHTML = ""
+
+  // Iterates over the subLinks array passed as an argument; and for each "link" object:
+  for (link of subLinksArray){
+
+    // Create an <a>element.
+    let a = document.createElement('a')
+
+    // On the new element, add an href attribute with its value set to the href property of the "link" object.
+    a.href = link.href
+
+    // Set the new element's content to the value of the text property of the "link" object.
+    a.text = link.text
+
+    // Append the new element to the subMenuEl element.
+    subMenuEl.appendChild(a)
+  }
+}
