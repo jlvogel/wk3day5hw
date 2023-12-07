@@ -312,6 +312,11 @@ function subMenuHandleClick(evt) {
     for (const link of topMenuLinks) {
       link.classList.remove('active')
     }
+
+    // Task 6.3
+    // Update the contents of mainEl to the contents of the <a> element, within an <h1> , clicked within subMenuEl .
+    mainEl.innerHTML = `<h1>${a.text}</h1>`
+
   }
 
 }
