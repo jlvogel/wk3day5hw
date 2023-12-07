@@ -22,3 +22,7 @@ mainEl.classList.add('flex-ctr')
 // Select and cache the <nav id="top-menu"> element in a variable named topMenuEl .
 topMenuEl = document.querySelector('#top-menu')
 
+// Task 2.1
+// Set the height topMenuEl element to be 100% .
+topMenuEl.style.height = '100%'
+
