@@ -17,3 +17,8 @@ mainEl.innerHTML = '<h1>SEI Rocks!</h1>'
 // Task 1.3
 // Add a class of flex-ctr to mainEl .
 mainEl.classList.add('flex-ctr')
+
+// Task 2.0
+// Select and cache the <nav id="top-menu"> element in a variable named topMenuEl .
+topMenuEl = document.querySelector('#top-menu')
+
