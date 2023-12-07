@@ -296,6 +296,15 @@ function subMenuHandleClick(evt) {
     // console.log the content of the <a> to verify the handler is working.
     let a = evt.target
     console.log(a.text)
+
+    // Task 6.1
+    // Next, the event listener should:
+
+    // Set showingSubMenu to false.
+    showingSubMenu = false
+
+    // Set the CSS top property of subMenuEl to 0.
+    subMenuEl.style.top = 0
   }
 
 }
