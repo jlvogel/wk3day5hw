@@ -305,6 +305,13 @@ function subMenuHandleClick(evt) {
 
     // Set the CSS top property of subMenuEl to 0.
     subMenuEl.style.top = 0
+
+
+    // Task 6.2
+    // Remove the class name of active from each <a> element in topMenuLinks - whether the active class exists or not.
+    for (const link of topMenuLinks) {
+      link.classList.remove('active')
+    }
   }
 
 }
