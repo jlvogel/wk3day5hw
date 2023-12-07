@@ -138,3 +138,17 @@ subMenuEl.style.top = 0
 //     {text: 'sign out', href: '/account/signout'},
 //   ]},
 // ];
+
+
+// Task 5.1
+// Select and cache the all of the <a> elements inside of topMenuEl in a variable named topMenuLinks .
+let topMenuLinks = []
+for (const child of topMenuEl.children) {
+  if(child.tagName = 'A') {
+    topMenuLinks.push(child)
+  }
+}
+console.dir(topMenuLinks)
+
+// Declare a global showingSubMenu variable and initialize it to false
+var showingSubMenu = false
