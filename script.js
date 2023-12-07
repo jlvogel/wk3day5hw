@@ -30,3 +30,6 @@ topMenuEl.style.height = '100%'
 // Set the background color of topMenuElto the value stored in the --top-menu-bgCSS custom property.
 topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
 
+// Task 2.3
+// Add a class of flex-around to topMenuEl .
+topMenuEl.classList.add('flex-around')
