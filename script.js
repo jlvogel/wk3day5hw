@@ -75,3 +75,15 @@ for(link of menuLinks) {
 // Task 4.0
 // Select and cache the <nav id=sub-menu"> element in a variable named subMenuEl .
 subMenuEl = document.querySelector('#sub-menu')
+
+// Task 4.1
+// Set the height subMenuElelement to be 100%.
+subMenuEl.style.height = '100%'
+
+// Task 4.2
+// Set the background color of subMenuElto the value stored in the --sub-menu-bgCSS custom property.
+subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)'
+
+// Task 4.3
+// Add the class of flex-aroundto the subMenuElelement.
+subMenuEl.classList.add('flex-around')
