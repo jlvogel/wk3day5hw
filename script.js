@@ -148,7 +148,25 @@ for (const child of topMenuEl.children) {
     topMenuLinks.push(child)
   }
 }
-console.dir(topMenuLinks)
 
 // Declare a global showingSubMenu variable and initialize it to false
 var showingSubMenu = false
+
+// Task 5.2
+// Attach a delegated 'click' event listener to topMenuEl.
+topMenuEl.addEventListener('click', handleClick)
+
+// The first line of code of the event listener function should call the event object's preventDefault()method.
+
+// The second line of code function should immediately return if the element clicked was not an <a>element.
+
+// console.logthe content of the <a>to verify the handler is working.
+function handleClick(evt) {
+  evt.preventDefault()
+  if(evt.target.tagName != 'A') {
+    return
+  } else {
+    console.log(evt.target.text)
+  }
+}
+
